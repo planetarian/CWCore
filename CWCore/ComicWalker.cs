@@ -42,6 +42,12 @@ public class ComicWalker
         AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
     });
 
+    /// <summary>
+    /// Begins downloading all chapters/pages available for the requested cid/episode.
+    /// </summary>
+    /// <param name="cid">cid value from comicwalker URL.</param>
+    /// <param name="episode">episode value from comicwalker URL.</param>
+    /// <returns></returns>
     public async Task GetAsync(string cid, string episode)
     {
         (string seriesTitle, List<ChapterInfo> chapters) = await GetTitleChapterInfo(cid, episode);
@@ -59,14 +65,14 @@ public class ComicWalker
     /// </summary>
     /// <param name="path">Folder path to strip.</param>
     /// <returns>The sanitized path.</returns>
-    static string SanitizePath(string path)
+    private static string SanitizePath(string path)
     {
         string invalid = new(Path.GetInvalidPathChars());
         Regex rg = new Regex(string.Format("[{0}]", Regex.Escape(invalid)));
         return rg.Replace(path, "");
     }
 
-    async Task<(string Title, List<ChapterInfo> Chapters)> GetTitleChapterInfo(string cid, string episode)
+    private async Task<(string Title, List<ChapterInfo> Chapters)> GetTitleChapterInfo(string cid, string episode)
     {
         JsonNode meta;
         string detailUrl = $"https://comic-walker.com/_next/data/2SvEXbIS_EMCYklkC4JQy/detail/{cid}/episodes/{episode}.json?workCode={cid}&episodeCode={episode}&episodeType=first";
@@ -124,7 +130,7 @@ public class ComicWalker
         return (title, chapters);
     }
 
-    async Task DownloadChaptersAsync(string seriesPath, IList<ChapterInfo> chapters)
+    private async Task DownloadChaptersAsync(string seriesPath, IList<ChapterInfo> chapters)
     {
         for (int c = 0; c < chapters.Count; c++)
         {
