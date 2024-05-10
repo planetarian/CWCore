@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CWGet": {
+      "commandName": "Project",
+      "commandLineArgs": "https://comic-walker.com/detail/KC_004604_S?episodeType=first"
+    }
+  }
+}

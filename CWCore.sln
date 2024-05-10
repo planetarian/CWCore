@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWCore", "CWCore\CWCore.csproj", "{17DEB818-9C20-459A-B85A-085B7D6AD1DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWGet", "CWGet\CWGet.csproj", "{225E0941-9C74-4F66-8AA1-C5598643517C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17DEB818-9C20-459A-B85A-085B7D6AD1DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17DEB818-9C20-459A-B85A-085B7D6AD1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17DEB818-9C20-459A-B85A-085B7D6AD1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17DEB818-9C20-459A-B85A-085B7D6AD1DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{225E0941-9C74-4F66-8AA1-C5598643517C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{225E0941-9C74-4F66-8AA1-C5598643517C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{225E0941-9C74-4F66-8AA1-C5598643517C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{225E0941-9C74-4F66-8AA1-C5598643517C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08124B16-6FAB-47AE-9C2A-651D154BD864}
+	EndGlobalSection
+EndGlobal
