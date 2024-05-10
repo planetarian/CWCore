@@ -37,7 +37,7 @@ public class ComicWalker
     /// </summary>
     public string DownloadPath { get; set; } = "manga";
 
-    readonly HttpClient _httpClient = new(new HttpClientHandler
+    private readonly HttpClient _httpClient = new(new HttpClientHandler
     {
         AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
     });
